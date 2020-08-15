@@ -1,5 +1,5 @@
-# Breath of the Wild Flag Utilities
-Game data and save game data flag utilities for LoZ:BotW
+# Breath of the Wild CookData Convert
+Converts CookData (cooking recipes) from machine code to human-readable format and replaces hashed names with strings (or vice versa). For LoZ:BotW
 
 ## Dependencies
 * A dumped copy of Legend of Zelda: Breath of the Wild (for Wii U or Switch)
