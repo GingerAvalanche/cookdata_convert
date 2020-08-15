@@ -24,5 +24,11 @@ First, navigate to the folder that contains the CookData, then run one or both o
 * `yml_to_sbyml` can be replaced with `s`
 * `-b` - Use big-endian mode. For deleting flags for Wii U.
 
+## Contributing
+* Issues: https://github.com/GingerAvalanche/cookdata_convert/issues
+* Source: https://github.com/GingerAvalanche/cookdata_convert
+
+This software is in early, but usable, beta. There are several variable types that are not yet handled, and several cases that are not handled for the variable types that are handled. Feel free to contribute in any way.
+
 ## License
 This software is licensed under the terms of the GNU Affero General Public License, version 3+. The source is publicly available on Github.

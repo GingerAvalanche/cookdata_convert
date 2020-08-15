@@ -11,7 +11,7 @@ setuptools.setup(
     description="CookData converter for LoZ:BotW",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/GingerAvalanche/",
+    url="https://github.com/GingerAvalanche/cookdata_convert",
     include_package_data=True,
     packages=setuptools.find_packages(),
     entry_points={"console_scripts": ["cookdata_convert = cookdata_convert.__main__:main",]},
