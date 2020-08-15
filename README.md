@@ -17,11 +17,11 @@ First, navigate to the folder that contains the CookData, then run one or both o
 
 #### Convert CookData.sbyml to YAML:
 ```cookdata_convert yml```
-* `sbyml_to_yml` can be replaced with `y`
+* `yml` can be replaced with `y`
 
 #### Convert CookData.yml to SBYML:
 ```cookdata_convert sbyml [-b]```
-* `yml_to_sbyml` can be replaced with `s`
+* `sbyml` can be replaced with `s`
 * `-b` - Use big-endian mode. For deleting flags for Wii U.
 
 ## Contributing
