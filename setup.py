@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cookdata_convert",
-    version="0.0.3",
+    version="0.0.4",
     author="Ginger",
     author_email="chodness@gmail.com",
     description="CookData converter for LoZ:BotW",
