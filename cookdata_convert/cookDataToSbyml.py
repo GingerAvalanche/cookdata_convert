@@ -14,7 +14,12 @@ def yml_to_sbyml(a):
             for combo in recipe["Actors"]:
                 idx = 0
                 for idx in range(len(combo)):
-                    combo[idx] = oead.U32(ctypes.c_uint32(zlib.crc32(combo[idx].encode())).value)
+                    try:
+                        combo[idx] = oead.U32(
+                            ctypes.c_uint32(zlib.crc32(combo[idx].encode())).value
+                        )
+                    except AttributeError:
+                        continue
         if "Tags" in recipe:
             for taglist in recipe["Tags"]:
                 idx = 0
@@ -25,15 +30,23 @@ def yml_to_sbyml(a):
                         )
                     except AttributeError:
                         continue
-        recipe["Recipe"] = oead.U32(ctypes.c_uint32(zlib.crc32(recipe["Recipe"].encode())).value)
+        try:
+            recipe["Recipe"] = oead.U32(
+                ctypes.c_uint32(zlib.crc32(recipe["Recipe"].encode())).value
+            )
+        except AttributeError:
+            continue
 
     for recipe in cookdata["SingleRecipes"]:
         if "Actors" in recipe:
             idx = 0
             for idx in range(len(recipe["Actors"])):
-                recipe["Actors"][idx] = oead.U32(
-                    ctypes.c_uint32(zlib.crc32(recipe["Actors"][idx].encode())).value
-                )
+                try:
+                    recipe["Actors"][idx] = oead.U32(
+                        ctypes.c_uint32(zlib.crc32(recipe["Actors"][idx].encode())).value
+                    )
+                except AttributeError:
+                    continue
         if "Tags" in recipe:
             idx = 0
             for idx in range(len(recipe["Tags"])):
@@ -43,7 +56,12 @@ def yml_to_sbyml(a):
                     )
                 except AttributeError:
                     continue
-        recipe["Recipe"] = oead.U32(ctypes.c_uint32(zlib.crc32(recipe["Recipe"].encode())).value)
+        try:
+            recipe["Recipe"] = oead.U32(
+                ctypes.c_uint32(zlib.crc32(recipe["Recipe"].encode())).value
+            )
+        except AttributeError:
+            continue
 
     endpath = Path.cwd() / Path("CookData.sbyml")
 
